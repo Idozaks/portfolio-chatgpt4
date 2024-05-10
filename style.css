@@ -1,0 +1,222 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: '
+Arial', sans-serif;
+}
+
+header {
+background: #333;
+color: #fff;
+text-align: center;
+padding: 20px 0;
+}
+
+.container {
+max-width: 1200px;
+margin: 20px auto;
+padding: 0 20px;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+section {
+width: 100%;
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: relative;
+overflow: hidden;
+}
+
+section div, section img {
+flex: 1;
+}
+
+.parallax {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.parallax img {
+    width: auto; /* Adjust to maintain aspect ratio */
+    max-width: 25%; /* Adjust the width to simulate a mobile phone screen */
+    height: auto; /* Maintain the aspect ratio */
+    margin: auto; /* Center the image in the section */
+    display: block; /* Correct block display */
+    border: 16px solid black; /* Simulate a phone border */
+    border-radius: 24px; /* Rounded corners like a phone */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Add some shadow for depth */
+    transition: transform 0.5s ease-out;
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+}
+
+.parallax img::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Adjust based on the border width */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Height of the black navigation bar */
+    background: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.parallax img::before {
+    content: '';
+    position: absolute;
+    top: -30px; /* Adjust based on desired position of the camera notch */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Width of the camera circle */
+    height: 10px; /* Height of the camera circle */
+    background: black;
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Ensure that the parent container aligns properly */
+section#overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px; /* Add space for the camera notch */
+    padding-bottom: 30px; /* Add space for the navigation bar */
+}
+
+.mobile-screen {
+    width: auto;
+    max-width: 25%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border: 16px solid black;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.mobile-screen::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+nav ul.games-list {
+    list-style: none;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 50%;
+}
+
+nav ul.games-list li {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+nav ul.games-list li:last-child {
+    border-bottom: none;
+}
+
+nav ul.games-list li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul.games-list li:hover, nav ul.games-list li a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mobile-screen::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+
+section {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+section div, section img {
+    flex: 1;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+text-align: center;
+background: #333;
+color: #fff;
+padding: 10px 0;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
